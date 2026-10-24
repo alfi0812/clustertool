@@ -31,6 +31,9 @@ spec:
       defaultReplicaCount: "1"
       # Overprovisioning might be needed when using volsync
       storageOverProvisioningPercentage: "100000"
+      # Automatically upgrade volume engines after a Longhorn upgrade,
+      # so old engine images can be cleaned up
+      concurrentAutomaticEngineUpgradePerNodeLimit: "3"
       # v2DataEngine: true
     persistence:
       # Set to false to pick another CSI as default
